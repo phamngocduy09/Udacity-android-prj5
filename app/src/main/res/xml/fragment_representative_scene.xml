@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ConstraintSet android:id="@+id/start">
+        <Constraint android:id="@+id/search_title" />
+        <Constraint android:id="@+id/address_line_1" />
+        <Constraint android:id="@+id/address_line_2" />
+        <Constraint android:id="@+id/city" />
+        <Constraint android:id="@+id/state" />
+        <Constraint android:id="@+id/zip" />
+        <Constraint android:id="@+id/button_search" />
+        <Constraint android:id="@+id/button_location" />
+    </ConstraintSet>
+
+    <ConstraintSet android:id="@+id/end">
+        <Constraint
+            android:id="@+id/search_title"
+            android:alpha="0"
+            android:visibility="gone" />
+        <Constraint
+            android:id="@+id/address_line_1"
+            android:alpha="0"
+            android:visibility="gone" />
+        <Constraint
+            android:id="@+id/address_line_2"
+            android:alpha="0"
+            android:visibility="gone" />
+        <Constraint
+            android:id="@+id/city"
+            android:alpha="0"
+            android:visibility="gone" />
+        <Constraint
+            android:id="@+id/state"
+            android:alpha="0"
+            android:visibility="gone" />
+        <Constraint
+            android:id="@+id/zip"
+            android:alpha="0"
+            android:visibility="gone" />
+        <Constraint
+            android:id="@+id/button_search"
+            android:alpha="0"
+            android:visibility="gone" />
+        <Constraint
+            android:id="@+id/button_location"
+            android:alpha="0"
+            android:visibility="gone" />
+    </ConstraintSet>
+
+    <Transition
+        app:constraintSetEnd="@+id/end"
+        app:constraintSetStart="@+id/start"
+        app:duration="1000">
+        <OnSwipe
+            app:dragDirection="dragUp"
+            app:touchAnchorId="@+id/rcv_representative"/>
+    </Transition>
+</MotionScene>
